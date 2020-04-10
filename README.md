@@ -1,24 +1,11 @@
-# README
+# Rails View Rendering Benchmark
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Look at `config/routes.rb` we have
 
-Things you may want to cover:
+- /view_rails : normal, default rails view rendering
+- /view_cells : using cells, for the cell AND for the layout
+- /view_mixed : mixed is using the cell for content body and layout using using rails default
 
-* Ruby version
+How it's implemented? Check the [RenderController](app/controllers/render_controller.rb)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+How to see the benchmark? Run `rails test`, the [render_controller_test](test/controllers/render_controller_test.rb) get you covered
